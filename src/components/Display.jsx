@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
 import './Display.css'
 export default props => (
-    <div className='display'>{props.value}</div>
+    <div className='display'><p>{props.value}</p></div>
 )
