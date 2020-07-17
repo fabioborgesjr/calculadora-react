@@ -34,9 +34,10 @@ export default class Calculator extends Component {
         } else {
             const equals = operation === '='
             const currentOperation = this.state.operation
-            const values = {...this.state.values}
+            const values = { ...this.state.values }
             try {
-                values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)                
+                // eslint-disable-next-line no-eval
+                values[0] = eval(`${values[0]} ${currentOperation} ${values[1]}`)
             } catch (e) {
                 values[0] = this.state.values[0]
             }
